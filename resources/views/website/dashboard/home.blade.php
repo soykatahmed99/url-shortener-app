@@ -18,6 +18,7 @@
                         <div class="card card-body">
                             <form action="{{route('short.url')}}" method="post">
                                 @csrf
+                                <h6 class="text-center mx-auto text-muted mb-3">Note: You can short 3 links per minute. <br> If you try to short more than 3 links per minute, you will be blocked for 5 minutes.</h6>
                                 <div class="row mb-3">
                                     <label for="" class="col-md-2">Link</label>
                                     <div class="col-md-10">
