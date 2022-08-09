@@ -11,6 +11,12 @@ class UserAuthController extends Controller
     private $user;
     public function registerUser(Request $request)
     {
+        $request->validate([
+           'email'=>'required|email|unique:public_users',
+           'name'=>'required',
+           'password'=>'required',
+           'confirm_password'=>'required'
+        ]);
         if ($request->password == $request->confirm_password)
         {
             PublicUser::createUser($request);
