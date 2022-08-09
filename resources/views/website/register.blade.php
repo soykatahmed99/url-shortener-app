@@ -27,18 +27,22 @@
 
                                 <div class="row mb-3">
                                     <input type="text" class="form-control" name="name" placeholder="Name">
+                                    @error('name') <span class="text-danger">{{$message}}</span>@enderror
                                 </div>
 
                                 <div class="row mb-3">
                                     <input type="email" class="form-control" name="email" placeholder="Email">
+                                    @error('email') <span class="text-danger">{{$message}}</span>@enderror
                                 </div>
 
                                 <div class="row mb-3">
                                     <input type="password" class="form-control" name="password" placeholder="Password">
+                                    @error('password') <span class="text-danger">{{$message}}</span>@enderror
                                 </div>
 
                                 <div class="row mb-3">
                                     <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password">
+                                    @error('confirm_password') <span class="text-danger">{{$message}}</span>@enderror
                                 </div>
 
                                 <div class="row mb-3">
